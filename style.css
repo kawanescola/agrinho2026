@@ -1,0 +1,118 @@
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid #ffca28; /* Detalhe em amarelo colheita */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Seções e Cards */
+.card {
+    background: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* Elementos Interativos */
+.calculadora {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+input[type="number"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #ffca28;
+    color: #333;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ffb300;
+}
+
+.oculto {
+    display: none;
+}
+
+#resultado {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 5px solid #2e7d32;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#valorEconomia {
+    color: #1b5e20;
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
