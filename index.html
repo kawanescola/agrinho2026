@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 | O Futuro é Sustentável</title>
+    <title>Agrinho 2026 | Futuro Sustentável - Edite Cordeiro Marques</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,54 +16,75 @@
     <nav id="navbar">
         <div class="nav-container">
             <h1 class="logo">Agro<span>Tech</span></h1>
-            <ul class="nav-links">
+            
+            <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#desafio">O Desafio</a></li>
-                <li><a href="#inovacao">Inovação</a></li>
-                <li><a href="#laboratorio">Laboratório</a></li>
+                <li><a href="#fisica-robotica">Física & Robótica</a></li>
+                <li><a href="#jornada">A Jornada</a></li>
+                <li><a href="#laboratorio">Simulador</a></li>
+                <li><a href="#quiz">Quiz Interativo</a></li>
+                <li><a href="#sobre">Nossa Equipe</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="inicio" class="hero-section">
         <div class="hero-content">
-            <span class="tag">Agrinho 2026</span>
+            <span class="tag">Projeto Agrinho 2026</span>
             <h2>Agro Forte,<br>Futuro Sustentável</h2>
-            <p>O equilíbrio exato entre a alta produção e a preservação do meio ambiente. A tecnologia é a nossa principal semente.</p>
-            <a href="#desafio" class="btn-primario">Descubra a Jornada</a>
+            <p>O equilíbrio exato entre a alta capacidade produtiva e a preservação ambiental, guiado pelas ciências exatas, automação e dados climáticos.</p>
+            <a href="#fisica-robotica" class="btn-primario">Explorar a Tecnologia</a>
         </div>
     </header>
 
-    <section id="desafio" class="sessao-texto">
+    <section id="fisica-robotica" class="sessao-texto bg-cinza">
         <div class="container-grid">
             <div class="texto-destaque">
-                <h3>O Desafio do Século XXI</h3>
-                <p>Como alimentar bilhões de pessoas sem esgotar os recursos do nosso planeta? A resposta não está em produzir menos, mas em produzir de forma inteligente. A física, a robótica e a automação estão reescrevendo as regras do campo.</p>
+                <h3>A Física e a Robótica no Campo</h3>
+                <p>A agricultura moderna deixou de ser baseada apenas na intuição para se tornar um laboratório rigoroso de <strong>pensamento computacional</strong>. Para alimentar uma população crescente sem esgotar o planeta, a tecnologia é a nossa principal ferramenta.</p>
+                <br>
+                <p>Neste projeto, analisamos como a <strong>cinemática e a mobilidade urbana/rural</strong> se aplicam diretamente ao maquinário agrícola. Através do cálculo exato de trajetórias e otimização de rotas por satélite, tratores e colheitadeiras autônomas reduzem o tempo de operação. Isso resulta em uma queda drástica na queima de combustíveis fósseis e, consequentemente, na emissão de gases do efeito estufa.</p>
+                <br>
+                <p>Além disso, a <strong>robótica</strong> introduz drones para mapeamento aéreo, identificando com precisão quais áreas necessitam de irrigação, evitando o desperdício em larga escala de recursos hídricos.</p>
             </div>
             <div class="imagem-destaque">
-                <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?q=80&w=800&auto=format&fit=crop" alt="Plantação sustentável" id="img-conceito">
+                <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=1000&auto=format&fit=crop" alt="Drone sobrevoando plantação tecnológica" id="img-conceito">
             </div>
         </div>
     </section>
 
-    <section id="inovacao" class="sessao-cards bg-cinza">
+    <section id="jornada" class="sessao-timeline">
         <div class="container-central">
-            <h3>Pilares da Inovação</h3>
-            <div class="grid-cards">
-                <div class="card-tech">
-                    <div class="icone">🛰️</div>
-                    <h4>Mapeamento de Precisão</h4>
-                    <p>Uso de dados espaciais para entender exatamente onde o solo precisa de nutrientes, evitando desperdícios.</p>
+            <h3>A Jornada Sustentável</h3>
+            <p class="subtitulo">O fluxo tecnológico desde a preparação do solo até a mesa do consumidor final.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>1. Coleta e Análise de Dados Espaciais</h4>
+                        <p>Sensores instalados no solo e satélites analisam a umidade e os nutrientes da terra. Algoritmos processam essas informações para decidir o momento exato e o local ideal para o plantio.</p>
+                    </div>
                 </div>
-                <div class="card-tech">
-                    <div class="icone">🤖</div>
-                    <h4>Robótica Aplicada</h4>
-                    <p>Máquinas autônomas que realizam o plantio e a colheita com cálculos matemáticos exatos, otimizando o tempo e a energia.</p>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>2. Irrigação Inteligente</h4>
+                        <p>Sistemas automatizados liberam água de forma calculada (irrigação por gotejamento ou microaspersão) apenas quando a planta atinge o nível crítico de necessidade, poupando milhões de litros por safra.</p>
+                    </div>
                 </div>
-                <div class="card-tech">
-                    <div class="icone">💧</div>
-                    <h4>Irrigação Inteligente</h4>
-                    <p>Sensores climáticos que liberam água apenas quando necessário, poupando milhões de litros por safra.</p>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>3. Colheita Autônoma e Logística</h4>
+                        <p>Máquinas pesadas guiadas por GPS realizam a colheita com margem de erro milimétrica. A logística de transporte é pré-calculada para garantir a entrega rápida e a redução da pegada de carbono.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,30 +98,30 @@
                 <span class="status-icon">● Live</span>
                 <h3>Simulador de Impacto AgroTech</h3>
             </div>
-            <p>Insira a área de plantio para projetar a economia de recursos com tecnologia de precisão.</p>
+            <p>Utilize nosso simulador de dados para projetar a economia real de recursos naturais ao implementar tecnologias de precisão no agronegócio.</p>
             
             <div class="painel-calculadora-v2">
                 <div class="input-grupo-v2">
-                    <label for="hectares">Hectares de Plantio</label>
+                    <label for="hectares">Área de Plantio (Hectares)</label>
                     <div class="input-wrapper">
                         <input type="number" id="hectares" placeholder="Ex: 150">
                         <span class="unit">ha</span>
                     </div>
                 </div>
-                <button id="btnCalcular" class="btn-agro-pulse">Executar Protocolo</button>
+                <button id="btnCalcular" class="btn-agro-pulse">Executar Protocolo de Análise</button>
                 
                 <div id="resultado" class="painel-resultado-v2 oculto">
                     <div class="resultado-item">
                         <div class="icon-res">💧</div>
                         <div class="dados-res">
-                            <span class="label-res">Água Preservada</span>
-                            <p><span id="valorAgua">0</span> <span class="mini-unit">Litros/mês</span></p>
+                            <span class="label-res">Volume Hídrico Poupado</span>
+                            <p><span id="valorAgua">0</span> <span class="mini-unit">L/mês</span></p>
                         </div>
                     </div>
                     <div class="resultado-item">
                         <div class="icon-res">🌱</div>
                         <div class="dados-res">
-                            <span class="label-res">CO₂ Evitado</span>
+                            <span class="label-res">Redução de CO₂ Estimada</span>
                             <p><span id="valorCarbono">0</span> <span class="mini-unit">Kg/mês</span></p>
                         </div>
                     </div>
@@ -109,10 +130,42 @@
         </div>
     </section>
 
+    <section id="quiz" class="sessao-quiz bg-cinza">
+        <div class="container-central">
+            <h3>Teste seus Conhecimentos</h3>
+            <p class="subtitulo">Avalie seu entendimento sobre inovação e sustentabilidade no campo.</p>
+            
+            <div class="quiz-container">
+                <div id="quiz-pergunta-container">
+                    <h4 id="pergunta">Iniciando sistema...</h4>
+                    <div id="botoes-resposta" class="btn-grid">
+                        </div>
+                </div>
+                
+                <div id="quiz-controles" class="oculto">
+                    <button id="btn-proximo" class="btn-primario">Avançar para a Próxima</button>
+                </div>
+                
+                <div id="quiz-resultado-final" class="oculto">
+                    <h4 id="mensagem-final"></h4>
+                    <button id="btn-reiniciar" class="btn-primario">Refazer Avaliação</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sessao-equipe">
+        <div class="container-central">
+            <h3>Nossa Missão</h3>
+            <p class="texto-equipe">Este projeto foi desenvolvido como submissão oficial para o Concurso Agrinho 2026 (Programação Paraná). Representando o 3º ano do Ensino Médio do Colégio Estadual Cívico-Militar Edite Cordeiro Marques, unimos nossos estudos de programação estruturada, física e design para provar que a inovação tecnológica é o único caminho para um amanhã próspero e equilibrado.</p>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-conteudo">
-            <p>&copy; 2026 - Projeto Agrinho | Programação Paraná</p>
-            <p class="autoria">Engenharia de Código por <strong>Kawan Miguel Marques</strong></p>
+            <h4 class="logo-footer">Agro<span>Tech</span></h4>
+            <p>&copy; 2026 - Concurso Agrinho | Categoria Ensino Médio</p>
+            <p class="autoria">Desenvolvimento Web e Arquitetura de Software por <strong>[Seu Nome] e Mariana</strong></p>
             <p class="escola">Colégio Estadual Cívico-Militar Edite Cordeiro Marques</p>
         </div>
     </footer>
