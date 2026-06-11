@@ -41,7 +41,7 @@
                 <p>Como alimentar bilhões de pessoas sem esgotar os recursos do nosso planeta? A resposta não está em produzir menos, mas em produzir de forma inteligente. A física, a robótica e a automação estão reescrevendo as regras do campo.</p>
             </div>
             <div class="imagem-destaque">
-                <img src="https://via.placeholder.com/600x400" alt="Plantação sustentável" id="img-conceito">
+                <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?q=80&w=800&auto=format&fit=crop" alt="Plantação sustentável" id="img-conceito">
             </div>
         </div>
     </section>
@@ -70,21 +70,40 @@
     </section>
 
     <section id="laboratorio" class="sessao-interativa">
-        <div class="container-central">
-            <h3>Laboratório de Dados</h3>
-            <p>Faça a simulação em tempo real e veja o impacto da tecnologia na economia de recursos.</p>
+        <div class="dark-overlay"></div> 
+        
+        <div class="container-central glass-panel">
+            <div class="cabecalho-lab">
+                <span class="status-icon">● Live</span>
+                <h3>Simulador de Impacto AgroTech</h3>
+            </div>
+            <p>Insira a área de plantio para projetar a economia de recursos com tecnologia de precisão.</p>
             
-            <div class="painel-calculadora">
-                <div class="input-grupo">
-                    <label for="hectares">Área de Plantio (Hectares):</label>
-                    <input type="number" id="hectares" placeholder="Ex: 100">
+            <div class="painel-calculadora-v2">
+                <div class="input-grupo-v2">
+                    <label for="hectares">Hectares de Plantio</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="hectares" placeholder="Ex: 150">
+                        <span class="unit">ha</span>
+                    </div>
                 </div>
-                <button id="btnCalcular" class="btn-secundario">Executar Simulação</button>
+                <button id="btnCalcular" class="btn-agro-pulse">Executar Protocolo</button>
                 
-                <div id="resultado" class="painel-resultado oculto">
-                    <h4>Resultados da Otimização:</h4>
-                    <p>Economia Hídrica: <span id="valorAgua">0</span> L/mês</p>
-                    <p>Redução de CO₂: <span id="valorCarbono">0</span> kg/mês</p>
+                <div id="resultado" class="painel-resultado-v2 oculto">
+                    <div class="resultado-item">
+                        <div class="icon-res">💧</div>
+                        <div class="dados-res">
+                            <span class="label-res">Água Preservada</span>
+                            <p><span id="valorAgua">0</span> <span class="mini-unit">Litros/mês</span></p>
+                        </div>
+                    </div>
+                    <div class="resultado-item">
+                        <div class="icon-res">🌱</div>
+                        <div class="dados-res">
+                            <span class="label-res">CO₂ Evitado</span>
+                            <p><span id="valorCarbono">0</span> <span class="mini-unit">Kg/mês</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
