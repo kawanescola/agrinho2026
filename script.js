@@ -1,31 +1,56 @@
-// Selecionando os elementos do HTML pelas suas IDs
-const btnCalcular = document.getElementById('btnCalcular');
-const inputHectares = document.getElementById('hectares');
-const divResultado = document.getElementById('resultado');
-const spanValorEconomia = document.getElementById('valorEconomia');
-
-// Adicionando um "ouvinte de evento" para o clique do botão
-btnCalcular.addEventListener('click', function() {
+// Aguarda o carregamento completo do HTML antes de rodar o script
+document.addEventListener('DOMContentLoaded', () => {
     
-    // Pega o valor digitado e converte para número
-    const hectares = parseFloat(inputHectares.value);
+    // Mapeamento dos elementos da interface
+    const btnCalcular = document.getElementById('btnCalcular');
+    const inputHectares = document.getElementById('hectares');
+    const divResultado = document.getElementById('resultado');
+    const spanValorAgua = document.getElementById('valorAgua');
+    const spanValorCarbono = document.getElementById('valorCarbono');
 
-    // Validação: verifica se o usuário digitou um número válido
-    if (isNaN(hectares) || hectares <= 0) {
-        alert("Por favor, insira um número válido de hectares.");
-        return; 
-    }
+    // Escuta o evento de clique no botão "Executar Simulação"
+    btnCalcular.addEventListener('click', () => {
+        
+        // Captura e converte a entrada do usuário
+        const hectares = parseFloat(inputHectares.value);
 
-    // Lógica do negócio: Simulação de economia de 15.000 litros por hectare/mês
-    const economiaPorHectare = 15000; 
-    const economiaTotal = hectares * economiaPorHectare;
+        // Trava de segurança: impede cálculos com dados inválidos
+        if (isNaN(hectares) || hectares <= 0) {
+            alert("Atenção: Insira um valor numérico maior que zero para a área de plantio.");
+            return;
+        }
 
-    // Formata o número para o padrão brasileiro (ex: 1.500.000)
-    const economiaFormatada = economiaTotal.toLocaleString('pt-BR');
+        // ==========================================
+        // VARIÁVEIS DE CÁLCULO E MODELAGEM DE DADOS
+        // ==========================================
+        
+        // Economia média de água com sistemas de irrigação inteligente e sensores de umidade (Litros por hectare/mês)
+        const taxaEconomiaAgua = 15400; 
+        
+        // Redução de CO2 baseada na otimização de rotas (cinemática do maquinário) e redução de diesel (Kg por hectare/mês)
+        const taxaReducaoCarbono = 42.5; 
 
-    // Injeta o valor calculado no HTML
-    spanValorEconomia.textContent = economiaFormatada;
+        // ==========================================
+        // PROCESSAMENTO
+        // ==========================================
+        const economiaAguaTotal = hectares * taxaEconomiaAgua;
+        const reducaoCarbonoTotal = hectares * taxaReducaoCarbono;
 
-    // Remove a classe 'oculto' para mostrar a div de resultado
-    divResultado.classList.remove('oculto');
+        // ==========================================
+        // SAÍDA DE DADOS (DOM Manipulation)
+        // ==========================================
+        
+        // Formata os números para o padrão brasileiro (ex: 15.400)
+        spanValorAgua.textContent = economiaAguaTotal.toLocaleString('pt-BR');
+        spanValorCarbono.textContent = reducaoCarbonoTotal.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+        // Efeito de transição suave ao exibir o resultado
+        divResultado.classList.remove('oculto');
+        divResultado.style.opacity = 0;
+        
+        setTimeout(() => {
+            divResultado.style.transition = "opacity 0.6s ease-in-out";
+            divResultado.style.opacity = 1;
+        }, 50);
+    });
 });
